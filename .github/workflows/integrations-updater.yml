@@ -83,4 +83,4 @@ jobs:
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: "--signoff"
           commit_message: "[Docs] Generated documentation for Integration"
-          branch: master
+          branch: integration-patch-1
