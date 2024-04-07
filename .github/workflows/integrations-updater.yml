@@ -48,7 +48,7 @@ jobs:
       - name: Pubish to layer5.io site
         working-directory: ./meshery/mesheryctl
         run: |
-          ./mesheryctl registry publish website ${{ secrets.INTEGRATION_SPREADSHEET_CRED }} 1DZHnzxYWOlJ69Oguz4LkRVTFM79kC2tuvdwizOJmeMw ../layer5/src/collections/integrations ../layer5/src/collections/integrations -o mdx
+          ./mesheryctl registry publish website ${{ secrets.INTEGRATION_SPREADSHEET_CRED }} 1DZHnzxYWOlJ69Oguz4LkRVTFM79kC2tuvdwizOJmeMw layer5/src/collections/integrations layer5/src/collections/integrations -o mdx
       - name: Pubish to Meshery docs
         working-directory: ./meshery/mesheryctl
         run: |
@@ -63,7 +63,7 @@ jobs:
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: "--signoff"
           commit_message: "[Docs] Generated documentation for Integration"
-          branch: master
+          branch: Yashsharma1911-patch-1
       - name: Commit changes to Meshery.io repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
