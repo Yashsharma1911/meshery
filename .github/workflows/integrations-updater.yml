@@ -63,7 +63,7 @@ jobs:
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: "--signoff"
           commit_message: "[Docs] Generated documentation for Integration"
-          branch: Yashsharma1911-patch-1
+          branch: master
       - name: Commit changes to Meshery.io repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
