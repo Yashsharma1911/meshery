@@ -14,7 +14,7 @@ on:
 
 jobs:
   integrations:
-    if: github.repository == 'meshery/meshery'
+    if: github.repository == 'Yashsharma1911/meshery'
     runs-on: ubuntu-22.04
     # outputs:
     #   output1: ${{ steps.step1.outputs.test }}
@@ -24,18 +24,18 @@ jobs:
         uses: actions/checkout@master
         with:
           path: meshery
-          token: ${{ secrets.GH_ACCESS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Checkout Layer5.io repo
         uses: actions/checkout@master
         with:
-          repository: layer5io/layer5
-          token: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: Yashsharma1911/layer5
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: layer5
       - name: Checkout Meshery.io repo
         uses: actions/checkout@master
         with:
-          repository: meshery/meshery.io
-          token: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: Yashsharma1911/meshery.io
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: meshery.io
       - name: Build mesheryctl
         working-directory: ./meshery/mesheryctl
@@ -57,9 +57,9 @@ jobs:
       - name: Commit changes to Layer5.io repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_user_name: l5io
+          commit_user_name: Yashsharma1911
           repository: ./layer5
-          commit_user_email: ci@layer5.io
+          commit_user_email: yashsharma2572@gmail.com
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: "--signoff"
           commit_message: "[Docs] Generated documentation for Integration"
@@ -67,9 +67,9 @@ jobs:
       - name: Commit changes to Meshery.io repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_user_name: l5io
+          commit_user_name: Yashsharma1911
           repository: ./meshery.io
-          commit_user_email: ci@layer5.io
+          commit_user_email: yashsharma2572@gmail.com
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: "--signoff"
           commit_message: "[Docs] Generated documentation for Integration"
@@ -77,9 +77,9 @@ jobs:
       - name: Commit changes to Meshery repo
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_user_name: l5io
+          commit_user_name: Yashsharma1911
           repository: ./meshery
-          commit_user_email: ci@layer5.io
+          commit_user_email: yashsharma2572@gmail.com
           commit_author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           commit_options: "--signoff"
           commit_message: "[Docs] Generated documentation for Integration"
